@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Jundiaí</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">⭐ Review Jundiaí</div>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Descubra as melhores empresas de Jundiaí</h1>
+    <p>Avalie, comente e ajude outros usuários a escolherem com confiança!</p>
+    <a href="#empresas" class="btn">Ver Empresas</a>
+  </section>
+
+  <section id="empresas" class="empresas">
+    <h2>Empresas em Destaque</h2>
+
+    <div class="empresa destaque-ouro">
+      <h3>Restaurante Sabor da Serra 🍽️</h3>
+      <div class="estrelas" data-avaliacao="4.5"></div>
+      <p>Comida caseira e ambiente acolhedor.</p>
+      <button onclick="avaliar('Restaurante Sabor da Serra')">Avaliar</button>
+    </div>
+
+    <div class="empresa destaque-prata">
+      <h3>Academia Jundifit 🏋️‍♀️</h3>
+      <div class="estrelas" data-avaliacao="4.0"></div>
+      <p>Equipamentos modernos e ótimos professores.</p>
+      <button onclick="avaliar('Academia Jundifit')">Avaliar</button>
+    </div>
+
+    <div class="empresa destaque-bronze">
+      <h3>Concessionária AutoJund 🚗</h3>
+      <div class="estrelas" data-avaliacao="3.8"></div>
+      <p>Ofertas em veículos novos e seminovos.</p>
+      <button onclick="avaliar('Concessionária AutoJund')">Avaliar</button>
+    </div>
+  </section>
+
+  <section id="planos" class="planos">
+    <h2>Planos de Destaque</h2>
+    <div class="plano ouro">
+      <h3>Plano Ouro</h3>
+      <p>Destaque total e prioridade nas buscas</p>
+      <p><strong>R$ 149,90/mês</strong></p>
+      <button>Assinar</button>
+    </div>
+    <div class="plano prata">
+      <h3>Plano Prata</h3>
+      <p>Destaque intermediário</p>
+      <p><strong>R$ 99,90/mês</strong></p>
+      <button>Assinar</button>
+    </div>
+    <div class="plano bronze">
+      <h3>Plano Bronze</h3>
+      <p>Destaque básico</p>
+      <p><strong>R$ 49,90/mês</strong></p>
+      <button>Assinar</button>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <p>📍 Review Jundiaí © 2025 | Todos os direitos reservados.</p>
+    <p>Entre em contato: <a href="mailto:contato@reviewjundiai.com">contato@reviewjundiai.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+:root {
+  --branco: #ffffff;
+  --azul-marinho: #002b5c;
+  --verde-oliva: #708238;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--branco);
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: var(--azul-marinho);
+  color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header nav a {
+  color: var(--branco);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  color: var(--verde-oliva);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--azul-marinho), var(--verde-oliva));
+  color: var(--branco);
+}
+
+.btn {
+  background: var(--verde-oliva);
+  color: var(--branco);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #5a6f2d;
+}
+
+/* EMPRESAS */
+.empresas {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empresa {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.destaque-ouro {
+  border-top: 6px solid gold;
+}
+.destaque-prata {
+  border-top: 6px solid silver;
+}
+.destaque-bronze {
+  border-top: 6px solid #cd7f32;
+}
+
+/* PLANOS */
+.planos {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.planos .plano {
+  display: inline-block;
+  background: var(--branco);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.plano.ouro h3 { color: gold; }
+.plano.prata h3 { color: silver; }
+.plano.bronze h3 { color: #cd7f32; }
+
+.plano button {
+  background: var(--azul-marinho);
+  color: var(--branco);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.plano button:hover {
+  background: var(--verde-oliva);
+}
+
+/* FOOTER */
+footer {
+  background: var(--azul-marinho);
+  color: var(--branco);
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 40px;
+}
+
+// Geração de estrelas conforme a avaliação
+document.querySelectorAll('.estrelas').forEach(div => {
+  const nota = parseFloat(div.getAttribute('data-avaliacao'));
+  const estrelasCheias = Math.floor(nota);
+  const meia = nota % 1 >= 0.5;
+  let html = '';
+
+  for (let i = 0; i < estrelasCheias; i++) html += '⭐';
+  if (meia) html += '✨';
+  div.innerHTML = html;
+});
+
+function avaliar(nomeEmpresa) {
+  const comentario = prompt(`Digite seu comentário sobre ${nomeEmpresa}:`);
+  const nota = parseFloat(prompt("Dê uma nota de 1 a 5:"));
+  if (comentario && nota >= 1 && nota <= 5) {
+    alert(`Obrigado por avaliar ${nomeEmpresa} com ${nota} estrelas!\nSeu comentário: "${comentario}"`);
+  } else {
+    alert("Avaliação cancelada ou inválida.");
+  }
+}
